@@ -26,6 +26,20 @@ namespace LivrariaPlus.Api.Data.Repositories
             return await _dbContext.Books.AsNoTracking().FirstOrDefaultAsync(book => book.Id == id);
         }
 
+        public async Task<Book?> GetByTitleAsync(string title)
+        {
+            return await _dbContext.Books.AsNoTracking().FirstOrDefaultAsync(book => book.Title == title);
+        }
+
+        public async Task<Book?> GetByAuthorAsync(string author)
+        {
+            return await _dbContext.Books.AsNoTracking().FirstOrDefaultAsync(book => book.Author == author);
+        }
+
+        public async Task<bool> ExistsByTitleAndAuthorAsync(string title, string author)
+        {
+            return await _dbContext.Books.AsNoTracking().AnyAsync(book => book.Title == title && book.Author == author);
+        }
         public async Task<List<Book>> GetAllAsync()
         {
             return await _dbContext.Books.AsNoTracking().ToListAsync();

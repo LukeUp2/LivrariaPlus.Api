@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using LivrariaPlus.Api.Communication.Responses;
 using LivrariaPlus.Api.Data.Repositories;
-using LivrariaPlus.Api.Extensions.EntityToDTO;
+using LivrariaPlus.Api.Extensions;
 
 namespace LivrariaPlus.Api.UseCases.Books.ListAll
 {

@@ -2,10 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using LivrariaPlus.Api.Communication.Requests;
 using LivrariaPlus.Api.Communication.Responses;
 using LivrariaPlus.Api.Models;
 
-namespace LivrariaPlus.Api.Extensions.EntityToDTO
+namespace LivrariaPlus.Api.Extensions
 {
     public static class BookExtension
     {
@@ -18,6 +19,18 @@ namespace LivrariaPlus.Api.Extensions.EntityToDTO
                 Price = book.Price,
                 Genre = book.Genre,
                 Stock = book.Stock
+            };
+        }
+
+        public static Book ToEntity(this CreateBookRequestJson request)
+        {
+            return new Book
+            {
+                Title = request.Title,
+                Author = request.Author,
+                Price = request.Price,
+                Genre = request.Genre,
+                Stock = request.Stock
             };
         }
     }
