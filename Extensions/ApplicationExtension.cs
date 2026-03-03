@@ -20,7 +20,7 @@ namespace LivrariaPlus.Api.Extensions
 
         private static void AddUnitOfWork(IServiceCollection services)
         {
-
+            services.AddScoped<UnitOfWork>();
         }
 
         private static void AddRepositories(IServiceCollection services)
