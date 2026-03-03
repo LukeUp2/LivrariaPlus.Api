@@ -1,8 +1,12 @@
+using LivrariaPlus.Api.Extensions;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
+builder.Services.AddControllers();
+builder.Services.AddApplication(builder.Configuration);
 
 var app = builder.Build();
 
@@ -10,8 +14,13 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
+
+    app.UseSwaggerUI(opt =>
+    {
+        opt.SwaggerEndpoint("/openapi/v1.json", "My API V1");
+    });
 }
 
 app.UseHttpsRedirection();
-
+app.MapControllers();
 app.Run();
