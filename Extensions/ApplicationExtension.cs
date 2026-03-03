@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using LivrariaPlus.Api.Data;
+using LivrariaPlus.Api.Data.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 namespace LivrariaPlus.Api.Extensions
@@ -24,7 +25,7 @@ namespace LivrariaPlus.Api.Extensions
 
         private static void AddRepositories(IServiceCollection services)
         {
-
+            services.AddScoped<BookRepository>();
         }
 
         private static void AddDbContext(IServiceCollection services, IConfiguration configuration)
