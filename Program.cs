@@ -1,5 +1,6 @@
 using System.Text.Json.Serialization;
 using LivrariaPlus.Api.Extensions;
+using LivrariaPlus.Api.Filters;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,6 +9,11 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddOpenApi();
 builder.Services.AddControllers();
 builder.Services.AddApplication(builder.Configuration);
+
+builder.Services.AddMvc(opt =>
+{
+    opt.Filters.Add<ExceptionFilter>();
+});
 
 builder.Services.ConfigureHttpJsonOptions(opt =>
 {
