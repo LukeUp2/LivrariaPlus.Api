@@ -123,3 +123,5 @@ C:\Users\joaos\Dev\Rocketseat\GerenciadorLivraria\LivrariaPlus.Api\obj\Debug\net
 C:\Users\joaos\Dev\Rocketseat\GerenciadorLivraria\LivrariaPlus.Api\obj\Debug\net10.0\LivrariaPlus.Api.pdb
 C:\Users\joaos\Dev\Rocketseat\GerenciadorLivraria\LivrariaPlus.Api\obj\Debug\net10.0\LivrariaPlus.Api.genruntimeconfig.cache
 C:\Users\joaos\Dev\Rocketseat\GerenciadorLivraria\LivrariaPlus.Api\obj\Debug\net10.0\ref\LivrariaPlus.Api.dll
+C:\Users\joaos\Dev\Rocketseat\GerenciadorLivraria\LivrariaPlus.Api\bin\Debug\net10.0\FluentValidation.dll
+C:\Users\joaos\Dev\Rocketseat\GerenciadorLivraria\LivrariaPlus.Api\obj\Debug\net10.0\LivrariaPlus.Api.sourcelink.json

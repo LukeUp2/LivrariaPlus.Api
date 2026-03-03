@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using LivrariaPlus.Api.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace LivrariaPlus.Api.Extensions
 {
@@ -17,22 +19,25 @@ namespace LivrariaPlus.Api.Extensions
 
         private static void AddUnitOfWork(IServiceCollection services)
         {
-            throw new NotImplementedException();
+
         }
 
         private static void AddRepositories(IServiceCollection services)
         {
-            throw new NotImplementedException();
+
         }
 
         private static void AddDbContext(IServiceCollection services, IConfiguration configuration)
         {
-            throw new NotImplementedException();
+            services.AddDbContext<AppDbContext>(options =>
+            {
+                options.UseNpgsql(configuration.GetConnectionString("Default"));
+            });
         }
 
         private static void AddUseCases(IServiceCollection services)
         {
-            throw new NotImplementedException();
+
         }
     }
 }
