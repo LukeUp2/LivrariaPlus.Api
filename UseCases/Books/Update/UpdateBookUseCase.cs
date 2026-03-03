@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using LivrariaPlus.Api.Communication.Requests;
+using LivrariaPlus.Api.Communication.Responses;
 
-namespace LivrariaPlus.Api.UseCases.Books.Create
+namespace LivrariaPlus.Api.UseCases.Update
 {
-    public class CreateBookUseCase
+    public class UpdateBookUseCase
     {
-        public Task Execute(CreateBookRequestJson request)
+        public Task<BookResponseJson> Execute(UpdateBookRequestJson request, Guid bookId)
         {
             throw new NotImplementedException();
         }

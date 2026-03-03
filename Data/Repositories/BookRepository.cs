@@ -33,6 +33,7 @@ namespace LivrariaPlus.Api.Data.Repositories
 
         public async Task UpdateAsync(Book book)
         {
+            book.UpdatedAt = DateTime.UtcNow;
             _dbContext.Books.Update(book);
         }
 
