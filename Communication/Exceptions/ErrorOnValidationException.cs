@@ -7,7 +7,7 @@ namespace LivrariaPlus.Api.Communication.Exceptions
 {
     public class ErrorOnValidationException : LivrariaPlusException
     {
-        public IList<string> ErrorMessages;
+        public IList<string> ErrorMessages { get; set; }
         public ErrorOnValidationException(string message)
         {
             ErrorMessages = [message];
