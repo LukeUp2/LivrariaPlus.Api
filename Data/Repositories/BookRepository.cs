@@ -51,14 +51,10 @@ namespace LivrariaPlus.Api.Data.Repositories
             _dbContext.Books.Update(book);
         }
 
-        public async void DeleteAsync(Guid id)
+        public async Task DeleteAsync(Book book)
         {
-            var book = await GetByIdAsync(id);
+            _dbContext.Books.Remove(book);
 
-            if (book is not null)
-            {
-                _dbContext.Books.Remove(book);
-            }
         }
     }
 }
